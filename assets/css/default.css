@@ -16,7 +16,9 @@ html {
 }
 
 :root {
-    --Grey: #cccccc;
+    --Grey: #e6e6e6;
+    --Green: #00bcd4;
+    --Red: #f44336;
     --White: #ffffff;
     --Black: #000000;
 }
