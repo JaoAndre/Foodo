@@ -22,3 +22,6 @@ html {
     --White: #ffffff;
     --Black: #000000;
 }
+
+.font-x { font: 400 24px 'Poppins'; }
+.font-p { font: 400 14px 'Poppins'; }

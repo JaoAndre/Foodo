@@ -2,7 +2,7 @@
   <div class="grid">
     
     <div v-for="row in 6" :key="row" class="grid-row">
-      <div v-for="(cell, index) in 5" :key="index" class="grid-cell"></div>
+      <div v-for="cell in 5" :key="cell" class="grid-cell font-p"></div>
     </div>
 
   </div>
@@ -35,7 +35,7 @@ export default {
   align-items: center;
   width: 50px;
   height: 50px;
-  border: 1px solid var(--Grey);
+  border: 2px solid var(--Black);
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.2s;

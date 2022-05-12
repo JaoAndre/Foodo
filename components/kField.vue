@@ -2,15 +2,15 @@
   <div class="keyboard">
 
     <div class="keyboard_row">
-      <div v-for="letter in ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P']" :key="letter" class="nKey" >{{ letter }}</div>
+      <div v-for="letter in ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P']" :key="letter" class="nKey font-p" >{{ letter }}</div>
     </div>
 
     <div class="keyboard_row">
-      <div v-for="letter in ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L']" :key="letter" class="nKey" >{{ letter }}</div>
+      <div v-for="letter in ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L']" :key="letter" class="nKey font-p" >{{ letter }}</div>
     </div>
 
     <div class="keyboard_row">
-      <div v-for="letter in ['Z', 'X', 'C', 'V', 'B', 'N', 'M']" :key="letter" class="nKey" >{{ letter }}</div>
+      <div v-for="letter in ['Z', 'X', 'C', 'V', 'B', 'N', 'M']" :key="letter" class="nKey font-p" >{{ letter }}</div>
     </div>
 
   </div>
@@ -48,6 +48,7 @@ export default {
   width: 50px;
   height: 50px;
   background: var(--Grey);
+  border: 2px solid var(--Black);
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.2s;
