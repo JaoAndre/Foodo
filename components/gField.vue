@@ -1,8 +1,8 @@
 <template>
   <div class="grid">
-      
-    <div v-for="row in 6" :key="row" class="grid_row">
-      <div v-for="(val, index) in 5" :key="index" class="grid-item"></div>
+    
+    <div v-for="row in 6" :key="row" class="grid-row">
+      <div v-for="(cell, index) in 5" :key="index" class="grid-cell"></div>
     </div>
 
   </div>
@@ -22,14 +22,14 @@ export default {
   row-gap: 10px;
 }
 
-.grid_row {
+.grid-row {
   display: flex;
   flex-direction: row;
   align-items: center;
   column-gap: 10px;
 }
 
-.grid-item {
+.grid-cell {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +41,7 @@ export default {
   transition: all 0.2s;
 }
 
-.grid-item:hover {
+.grid-cell:hover {
   transform: scale(1.1);
 }
 </style>
