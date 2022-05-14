@@ -2,7 +2,6 @@
   <div class="grid">
 
     <div v-for="(row, index) in grid" :key="index + '_row'" class="grid_row">
-      {{ index }}
       <div
         v-for="(cell, index) in row"
         :key="index + '_cell'"

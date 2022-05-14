@@ -6,7 +6,6 @@
       :key="index + '_row'"
       class="keyboard_row"
     >
-      {{ index }}
       <div v-for="letter in row" :key="letter" class="nKey font-p">
         {{ letter }}
       </div>
