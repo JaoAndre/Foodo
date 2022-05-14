@@ -1,24 +1,32 @@
 <template>
   <div class="keyboard">
 
-    <div class="keyboard_row">
-      <div v-for="letter in ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P']" :key="letter" class="nKey font-p" >{{ letter }}</div>
+    <div
+      v-for="(row, index) in keyboard"
+      :key="index + '_row'"
+      class="keyboard_row"
+    >
+      {{ index }}
+      <div v-for="letter in row" :key="letter" class="nKey font-p">
+        {{ letter }}
+      </div>
     </div>
-
-    <div class="keyboard_row">
-      <div v-for="letter in ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L']" :key="letter" class="nKey font-p" >{{ letter }}</div>
-    </div>
-
-    <div class="keyboard_row">
-      <div v-for="letter in ['Z', 'X', 'C', 'V', 'B', 'N', 'M']" :key="letter" class="nKey font-p" >{{ letter }}</div>
-    </div>
-
+    
   </div>
 </template>
 
 <script>
 export default {
   name: "kField",
+  data() {
+    return {
+      keyboard: [
+        ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
+        ["A", "S", "D", "F", "G", "H", "J", "K", "L"],
+        ["Z", "X", "C", "V", "B", "N", "M"],
+      ],
+    };
+  },
 };
 </script>
 

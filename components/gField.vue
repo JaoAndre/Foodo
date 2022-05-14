@@ -1,16 +1,35 @@
 <template>
   <div class="grid">
-    
-    <div v-for="row in 6" :key="row" class="grid-row">
-      <div v-for="cell in 5" :key="cell" class="grid-cell font-p"></div>
-    </div>
 
+    <div v-for="(row, index) in grid" :key="index + '_row'" class="grid_row">
+      {{ index }}
+      <div
+        v-for="(cell, index) in row"
+        :key="index + '_cell'"
+        class="grid_cell font-p"
+      >
+        {{ cell }}
+      </div>
+    </div>
+    
   </div>
 </template>
 
 <script>
 export default {
   name: "gField",
+  data() {
+    return {
+      grid: [
+        ["", "", "", "", ""],
+        ["", "", "", "", ""],
+        ["", "", "", "", ""],
+        ["", "", "", "", ""],
+        ["", "", "", "", ""],
+        ["", "", "", "", ""],
+      ],
+    };
+  },
 };
 </script>
 
@@ -22,14 +41,14 @@ export default {
   row-gap: 10px;
 }
 
-.grid-row {
+.grid_row {
   display: flex;
   flex-direction: row;
   align-items: center;
   column-gap: 10px;
 }
 
-.grid-cell {
+.grid_cell {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +60,7 @@ export default {
   transition: all 0.2s;
 }
 
-.grid-cell:hover {
+.grid_cell:hover {
   transform: scale(1.1);
 }
 </style>
